@@ -3,6 +3,8 @@ const router = require('express').Router(),
 
 router.route("/")
   .get(booksController.viewBooks)
+
+router.route("/new")
   .post(booksController.saveBook)
 
 router.route("/:id")

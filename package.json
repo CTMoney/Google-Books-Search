@@ -27,7 +27,8 @@
     "axios": "^0.18.0",
     "express": "^4.16.4",
     "if-env": "^1.0.4",
-    "mongoose": "^5.5.3"
+    "mongoose": "^5.5.3",
+    "react-router-dom": "^5.0.0"
   },
   "bugs": {
     "url": "https://github.com/CTMoney/googlebooksearch/issues"
