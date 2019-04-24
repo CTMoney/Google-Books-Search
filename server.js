@@ -1,7 +1,9 @@
 const express = require('express'),
+  mongoose = require('mongoose'),
   path = require('path'),
   PORT = process.env.PORT || 3001,
-  app = express()
+  app = express(),
+  routes = require('./routes')
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
@@ -16,6 +18,6 @@ app.get('*', (req, res) => {
 
 app.use(routes);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks");
 
 app.listen(PORT, () => console.log(`🌎 ==> API server now on port ${PORT}`))
