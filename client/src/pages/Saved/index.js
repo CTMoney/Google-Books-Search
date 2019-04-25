@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Books from './books'
+import Books from './Books'
 import API from '../../utils/API'
 
 class Saved extends Component {
@@ -21,10 +21,18 @@ class Saved extends Component {
 
   render() {
     return (
+      <>
+      <div className="jumbotron jumbotron-fluid  mx-auto mt-3" style={{ maxWidth: "80%" }}>
+        <div className="container">
+        <h1 className="display-4">(React) Google Books Search</h1>
+        <p className="lead">Search for and Save Books of Interest</p>
+        </div>
+      </div>
+    
       <div className="jumbotron jumbotron-fluid  mx-auto mt-3" style={{ maxWidth: "80%" }}>
         {/* {
-      this.state.books.map(({id, author, handleDel, image, linkTo, snippet, summary, title}) => {
-        <Books
+          this.state.books.map(({id, author, handleDel, image, linkTo, snippet, summary, title}) => {
+          <Books
           id={y'es}
           author={'yes'}
           handleDel={this.handleDel}
@@ -33,12 +41,13 @@ class Saved extends Component {
           snippet={'yes'}
           summary={'yes'}
           title={'yes'}
-        />
-      })
+          />
+          })
     } */}
       </div>
-    );
-  }
+      </>
+    )
+    }
 }
 
-export default Saved;
+export default Saved
