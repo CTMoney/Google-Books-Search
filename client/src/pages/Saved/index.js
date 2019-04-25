@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Books from './books'
 import API from '../../utils/API'
 
