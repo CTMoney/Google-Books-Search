@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
+
 
 const Books = props => {
-  const { id, title, image, snippet, author, summary, linkTo, handleSave, handleDel } = props;
+  const { id, title, image, snippet, author, summary, linkTo, handleDel } = props;
 
   return (
 
@@ -18,9 +19,8 @@ const Books = props => {
           <button type="button" btn className="btn-outline-info">
             <a href={linkTo}>View</a>
           </button>
-          {/* will add login here for differentiating whether to display delete or save btn */}
-          <button type="button" btn className={"btn-outline-success" || "btn-outline-danger"}>
-            <a href={handleSave || handleDel}>{"Save" || "Delete"}</a>
+          <button type="button" btn className={"btn-outline-danger"}>
+            <a href={handleDel}>Delete</a>
           </button>
         </div>
       </div>

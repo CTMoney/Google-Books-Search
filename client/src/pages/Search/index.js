@@ -25,6 +25,9 @@ class Search extends Component {
   handleSave = event => {
     API.saveBook()
   }
+  handleDel = event => {
+    API.deleteBook()
+  }
 
   handleInput = event => {
     const { name, value } = event.target
@@ -38,11 +41,14 @@ class Search extends Component {
       <>
         <Header />
         <Form handleSearch={this.handleSearch} handleInput={this.handleInput} bookSearchTerm={this.state.bookSearchTerm} />
-        {/* {
+        <div className="jumbotron jumbotron-fluid  mx-auto mt-3" style={{ maxWidth: "80%" }}>
+          {/* {
           this.state.books.map(() => {
             <Books
+              id={'yes}
               author={'yes'}
               handleSave={this.handleSave}
+              handleDel={this.handleDel}
               image={'yes'}
               linkTo={'yes'}
               snippet={'yes'}
@@ -51,7 +57,7 @@ class Search extends Component {
             />
           })
         } */}
-        <Books />
+        </div>
       </>
     )
   }
